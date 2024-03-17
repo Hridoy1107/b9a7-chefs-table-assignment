@@ -22,7 +22,7 @@ const header = () => {
             </div>
         </div>
         <div className="mt-10">
-            <img  className="h-[600px] w-[1280px]" src="https://i.ibb.co/mGvtT3v/food-1898194-12801.jpg" alt="" />
+            <img  className="h-[600px] w-[1280px] rounded-2xl" src="https://i.ibb.co/mGvtT3v/food-1898194-12801.jpg" alt="" />
             <div className="flex justify-center">
             <div className="absolute top-[240px]">
             <h1 className="font-bold h-[152px] w-[880px] text-5xl text-center text-white">Discover an exceptional cooking class tailored for you!</h1>
