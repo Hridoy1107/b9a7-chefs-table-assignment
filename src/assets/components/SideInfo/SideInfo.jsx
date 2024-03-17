@@ -9,7 +9,7 @@ const SideInfo = ({sidebars}) => {
             <p className='w-[60px] h-[48px]'>{preparingTime}</p>
             <p className='w-[60px] h-[48px]'>{calories}</p>
             </div>
-            <button className="rounded-[46px] my-3 btn w-[100px] h-[30px] hover:bg-[#0BE58A] bg-[#0BE58A] text-[#150B2B] text-[8px] border-none">Preparing</button>
+            <button className="rounded-[46px] my-3 btn w-[100px] h-[30px] hover:bg-[#0BE58A] bg-[#0BE58A] text-[#150B2B] text-[12px] border-none">Preparing</button>
         </div>
     );
 };

@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
+import Toast from '../Toast/Toast';
  
  const Recipes = ({recipe, btnToAddSidebar}) => {
     const{recipeName, recipeImage, shortDescription, ingredients, calories, preparingTime} = recipe;
+    const [isClicked, setIsClicked] = useState(false);
     return (
         <div>
         <div className='w-[380px] h-[750px]'>
         <div className='rounded-2xl border-black bg-[#28282833] w-[380px] h-[750px]'>
-            <img className='w-[330px] h-[200px] rounded-2xl p-3 ml-7' src={recipeImage} alt="" />
+            <img className='w-[330px] h-[200px] rounded-2xl p-3 ml-6' src={recipeImage} alt="" />
             <h2 className='text-2xl font-bold w-[330px] mt-4 ml-7 h-[50px]'>{recipeName}</h2>
             <p className='text-xl w-[330px] mt-4 text-[#878787] ml-7 h-[100px]'>{shortDescription}</p>
             <hr className='mt-2' />
@@ -27,7 +30,14 @@ import PropTypes from 'prop-types';
             <p className='text-[#878787] text-xl ml-3'>{calories}</p>
             </div>
             </div>
-            <button onClick={() => btnToAddSidebar(recipe)} className="rounded-[46px] ml-6 mt-10 btn w-[180px] h-[64px] hover:bg-[#0BE58A] bg-[#0BE58A] text-[#150B2B] text-[16px] border-none">Want to Cook</button>
+            <button onClick={() => {btnToAddSidebar(recipe); setIsClicked(true)}} 
+            className={`rounded-[46px] ml-6 mt-10 btn w-[180px] h-[64px] 
+            ${isClicked ? 'bg-[#0BE58A] hover:bg-[#0BE58A] cursor-not-allowed' : 'hover:bg-[#0BE58A] bg-[#0BE58A]'} 
+          text-[#150B2B] text-[16px] border-none`}
+            disabled={isClicked}>Want to Cook</button>
+            <div  className={isClicked ? '' : 'hidden'}>
+            <Toast></Toast>
+            </div>
         </div>
         </div>
         </div>
