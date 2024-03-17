@@ -37,7 +37,7 @@ const header = () => {
         <div>
         <div className="flex justify-center">
         <div>
-            <h1 className="font-bold text-3xl text-center mt-20">Recipe Calories</h1>
+            <h1 className="font-bold text-4xl text-center mt-20">Our Recipes</h1>
             <h1 className="mt-8 font-normal h-[60px] w-[940px] text-xl text-center text-[#150B2B99]">Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus vulputate netus pharetra rhoncus. Eget urna volutpat curabitur elementum mauris aenean neque. </h1>
         </div>
         </div>
